@@ -1,0 +1,21 @@
+#include <Servo.h>
+
+Servo servo_9;
+
+void setup()
+{
+  pinMode(13, OUTPUT);
+  pinMode(A0, INPUT);
+  servo_9.attach(9);
+
+}
+
+void loop()
+{
+  digitalWrite(13, HIGH);
+  delay(5000); // Wait for 5000 millisecond(s)
+
+  analogRead(A0);
+
+  servo_9.write(90);
+}
